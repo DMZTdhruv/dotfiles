@@ -5,6 +5,7 @@
       enable = true;
       xwayland.enable = true;
     };
+    niri.enable = true;
     adb.enable = true;
     zsh.enable = true;
 
