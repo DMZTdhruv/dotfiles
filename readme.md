@@ -23,6 +23,7 @@ Hey there! This is my **NixOS** setup—crafted with care for devs like me who l
 ├── home-manager      # User-level config with standalone Home Manager (in ~/.config/home-manager)
 ├── nvim              # My Neovim setup (lives in ~/.config/nvim)
 ├── hyprland          # Hyprland window manager config (in ~/.config/hypr)
+├── niri              # Niri window manager config (in ~/.config/niri)
 └── waybar            # Waybar config (in ~/.config/waybar)
 ```
 
@@ -52,9 +53,9 @@ Path: `~/.config/nvim`
 
 ---
 
-## 🔸 Hyprland & Waybar
+## 🔸 Hyprland, Niri & Waybar
 
-Using **Hyprland** as my window manager—it’s still a bit of a WIP (getting riced slowly lol), but usable and snappy. Also running **Waybar** for the status bar. Nothing crazy fancy yet, but it works.
+Using **Hyprland** and **Niri** as my window managers—it’s still a bit of a WIP (getting riced slowly lol), but usable and snappy. Also running **Waybar** for the status bar with dedicated configs for both compositors. Nothing crazy fancy yet, but it works.
 
 > And yeah—**hyprpaper** is handling wallpapers
 

@@ -1,0 +1,148 @@
+// This is a minimal but functional niri configuration for the Kita rice.
+// It integrates with waybar, hyprpaper, and swaync from the original setup.
+
+input {
+    keyboard {
+        xkb {
+            layout = "us"
+        }
+    }
+
+    touchpad {
+        tap
+        natural-scroll
+    }
+
+    mouse {
+        // accel-speed = 0.6
+        accel-profile = "flat"
+    }
+
+    warp-mouse-to-focus
+    focus-follows-mouse
+}
+
+output "eDP-1" {
+    mode "preferred"
+    scale 1.25
+}
+
+layout {
+    gaps 5
+    center-focused-column "never"
+
+    preset-column-widths {
+        proportion 0.33333
+        proportion 0.5
+        proportion 0.66667
+    }
+
+    default-column-width { proportion 0.5; }
+
+    focus-ring {
+        enable
+        width 2
+        active-color "#7cb454"
+        inactive-color "#4d5d69"
+    }
+
+    border {
+        off
+    }
+
+    struts {
+        left 0
+        right 0
+        top 0
+        bottom 0
+    }
+}
+
+spawn-at-startup "waybar" "-c" "~/.config/waybar/config-niri.jsonc"
+spawn-at-startup "hyprpaper"
+spawn-at-startup "swaync"
+spawn-at-startup "dunst"
+
+cursor {
+    xcursor-theme "Bibata-Modern-Ice"
+    xcursor-size 24
+}
+
+environment {
+    QT_QPA_PLATFORM "wayland"
+    DISPLAY ":0"
+}
+
+binds {
+    // Keys follow the Hyprland config where possible.
+    Mod+Return { spawn "alacritty"; }
+    Alt+Space { spawn "rofi" "-show" "drun" "-show-icons"; }
+    Print { spawn "hyprshot" "-m" "region" "-o" "~/Pictures/Screenshots"; }
+    Shift+Print { spawn "hyprshot" "-m" "window" "-o" "~/Pictures/Screenshots"; }
+
+    Mod+Q { close-window; }
+    Mod+M { quit; }
+    Mod+V { toggle-window-floating; }
+    Mod+F { maximize-column; }
+    Mod+Shift+F { fullscreen-window; }
+
+    // Focus movement
+    Mod+H { focus-column-left; }
+    Mod+J { focus-window-down; }
+    Mod+K { focus-window-up; }
+    Mod+L { focus-column-right; }
+
+    // Moving windows
+    Mod+Shift+H { move-column-left; }
+    Mod+Shift+J { move-window-down; }
+    Mod+Shift+K { move-window-up; }
+    Mod+Shift+L { move-column-right; }
+
+    // Resizing
+    Mod+Minus { set-column-width "-10%"; }
+    Mod+Equal { set-column-width "+10%"; }
+
+    // Workspaces (Niri calls them "named workspaces" or just indexed ones)
+    Mod+1 { focus-workspace 1; }
+    Mod+2 { focus-workspace 2; }
+    Mod+3 { focus-workspace 3; }
+    Mod+4 { focus-workspace 4; }
+    Mod+5 { focus-workspace 5; }
+    Mod+6 { focus-workspace 6; }
+    Mod+7 { focus-workspace 7; }
+    Mod+8 { focus-workspace 8; }
+    Mod+9 { focus-workspace 9; }
+    Mod+0 { focus-workspace 10; }
+
+    Mod+Shift+1 { move-window-to-workspace 1; }
+    Mod+Shift+2 { move-window-to-workspace 2; }
+    Mod+Shift+3 { move-window-to-workspace 3; }
+    Mod+Shift+4 { move-window-to-workspace 4; }
+    Mod+Shift+5 { move-window-to-workspace 5; }
+    Mod+Shift+6 { move-window-to-workspace 6; }
+    Mod+Shift+7 { move-window-to-workspace 7; }
+    Mod+Shift+8 { move-window-to-workspace 8; }
+    Mod+Shift+9 { move-window-to-workspace 9; }
+    Mod+Shift+0 { move-window-to-workspace 10; }
+
+    // Multimedia keys
+    XF86AudioRaiseVolume { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "1%+"; }
+    XF86AudioLowerVolume { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "1%-"; }
+    XF86MonBrightnessUp { spawn "brightnessctl" "set" "+3%"; }
+    XF86MonBrightnessDown { spawn "brightnessctl" "set" "3%-"; }
+}
+
+window-rule {
+    match app-id="pavucontrol"
+    open-floating true
+}
+
+window-rule {
+    match app-id="blueman-manager"
+    open-floating true
+}
+
+window-rule {
+    match app-id="org.kde.dolphin"
+    open-floating true
+}
