@@ -1,0 +1,12 @@
+* {
+  bg: #131313;
+  bgt: #131313b3;
+  t: transparent;
+  fg: #e2e2e2;
+
+  selected-bg: #d4d4d4;
+  selected-fg: #000000;
+
+  active: #e2e2e2;
+  urgent: #ffb4ab;
+}
