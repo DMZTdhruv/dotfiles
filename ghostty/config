@@ -1,0 +1,22 @@
+# Font
+font-family = JetBrains Mono Nerd Font
+font-size = 14
+font-style = medium
+font-style-italic = false
+font-thicken = true
+adjust-cell-width = 0
+
+# Theme
+theme = noctalia
+
+# Cursor
+cursor-style = block
+
+# Window
+background-opacity = 1
+window-padding-x = 14
+window-padding-y = 14
+
+# Shell & behavior
+shell-integration-features = no-cursor
+confirm-close-surface = false
