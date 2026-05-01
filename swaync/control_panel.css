@@ -1,0 +1,150 @@
+/* Control Center Panel */
+.control-center {
+  background: alpha(#101010, 0.78);
+  border-radius: 12px;
+  ox-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+  padding: 0;
+  margin: 0;
+}
+
+/* Title bar */
+.control-center .widget-title {
+  color: white;
+  font-weight: 600;
+  font-size: 16px;
+  padding: 0px 12px;
+  border-radius: 12px 12px 0 0;
+}
+
+.control-center .control-center-clear-all {
+  background: none;
+  padding: 0;
+}
+
+.control-center .notification-group-header {
+  font-size: 16px;
+}
+
+.control-center .notification-group-icon {
+  display: none;
+  -gtk-icon-size: 0px;
+}
+
+.control-center .image-button {
+  border-redius: 2px;
+}
+
+.control-center .circular {
+  border-redius: 2px !important;
+}
+
+.control-center .notification-group-collapse-button {
+  border-redius: 2px;
+}
+
+/* DND toggle */
+.control-center .widget-dnd {
+  color: white;
+  padding: 0px 12px;
+  transition: all 0.2s ease;
+}
+
+.control-center .control-center-dnd {
+  color: white;
+}
+
+.control-center .control-center-dnd.active {
+  color: white;
+}
+
+/* MPRIS player */
+.control-center .widget-mpris {
+  box-shadow: none;
+  background: none;
+}
+
+.control-center .widget-mpris-album-art {
+  background: none;
+}
+
+.control-center .mpris-overlay {
+  box-shadow: none;
+}
+
+.control-center .notification-group {
+  background: none;
+}
+
+.control-center .widget-mpris-title {
+  color: white;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.control-center .widget-mpris-subtitle {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 14px;
+}
+
+/* Buttons grid */
+.control-center .widget-buttons-grid {
+  background: rgba(32, 32, 32, 0.8);
+}
+
+.control-center .widget-buttons-grid button {
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 16px;
+  font-size: 18px;
+  transition: all 0.2s ease;
+  min-height: 60px;
+}
+
+.control-center .widget-buttons-grid button:hover {
+  background: white;
+  color: black;
+}
+
+/* Notifications list inside panel */
+.control-center .widget-notifications {
+  background: #101010;
+  padding: 0;
+  border-radius: 0 0 12px 12px;
+}
+
+.control-center .notification {
+  border-radius: 14px;
+  background: alpha(#272727, 1);
+  margin: 0px 8px;
+  padding: 12px;
+  border: 0px;
+  box-shadow: none; /* <- this removes the drop shadow */
+  transition: all 0.2s ease;
+}
+
+.control-center .notification .time {
+  padding-left: 10px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.control-center .notification .summary {
+  font-size: 16px;
+  font-weight: 600;
+  padding: 4px 0;
+  color: white;
+}
+
+.control-center .notification .body {
+  font-size: 14px;
+  line-height: 1.4;
+  padding: 2px 0;
+  color: rgba(255, 255, 255, 0.76);
+}
+
+.control-center .notification:hover {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 255, 255, 0.3);
+}

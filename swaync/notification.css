@@ -1,0 +1,104 @@
+.floating-notifications .notification {
+  background: alpha(#101010, 0.68);
+  border: 1px solid alpha(white, 0.1);
+  padding: 12px 12px;
+  margin: 0;
+  border-radius: 18px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0px 0px 6.6px rgba(0, 0, 0, 0.43);
+  animation: slide-in 0.3s ease-out;
+}
+
+/* Notification content */
+.floating-notifications .summary {
+  font-size: 16px;
+  font-weight: 600;
+  padding: 4px 0;
+  color: white;
+}
+
+.floating-notifications .body {
+  font-size: 14px;
+  line-height: 1.4;
+  padding: 2px 0;
+  color: rgba(255, 255, 255, 0.76);
+}
+
+.floating-notifications .time,
+.floating-notifications .app-name {
+  font-size: 11px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+/* Notification icon */
+.floating-notifications .notification-icon {
+  border: 1px solid red;
+  border-radius: 6px;
+}
+
+.notification-content image {
+  border-radius: 10px;
+  margin-right: 14px;
+}
+
+/* Actions */
+.floating-notifications .notification-action {
+  background: none;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 16px;
+  margin: 4px;
+  font-size: 12px;
+  transition: all 0.2s ease;
+}
+
+.floating-notifications .notification-action:hover {
+  color: black;
+}
+
+/* Close button */
+.floating-notifications .close-button {
+  background: none;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 1px;
+  margin: 14px;
+  min-width: 24px;
+  min-height: 24px;
+  transition: all 0.2s ease;
+}
+
+.floating-notifications .close-button:hover {
+  background: #333333;
+  transform: scale(1.1);
+}
+
+/* Animations */
+@keyframes slide-in {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.floating-notifications .notification-default-action {
+  -gtk-can-target: false;
+}
+
+@keyframes slide-out {
+  from {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+}
