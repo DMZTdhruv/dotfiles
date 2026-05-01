@@ -1,0 +1,102 @@
+@define-color softbg   rgba(79, 86, 92, 0.4);
+@define-color bg       #1e1e2e;
+@define-color text     #ffffff;
+
+window#waybar {
+  color: @text;
+  /* border-bottom-left-radius: 11px; */
+  /* border-bottom-right-radius: 11px; */
+  /* border: 1px solid @softbg; */
+  border-top: 0px;
+  font-size: 11px;
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.8), transparent);
+  font-family: "Poppins", "JetBrainsMono Nerd Font Propo", sans-serif;
+  font-weight: 500;
+  -webkit-font-smoothing: none;
+}
+
+#window {
+  padding: 4px 8px;
+  margin: 3px 6px 6px 6px;
+  background-color: @softbg;
+  border-radius: 6px;
+  opacity: 1;
+  transition: all 0.3s ease;
+}
+
+window#waybar.empty #window {
+  opacity: 0;
+  padding: 4px 0px;
+}
+
+#cava {
+  margin: 3px 3px 6px 3px;
+  background-color: @softbg;
+  border-radius: 8px;
+  padding: 2px 6px;
+}
+
+#custom-nixos-logo {
+  margin: 0px 0px;
+  font-size: 22px;
+  padding: 2px 6px 4px 8px;
+}
+
+#workspaces {
+  margin: 2px 6px 4px 4px;
+  padding: 0;
+}
+
+#workspaces button {
+  all: unset;
+  color: #6c7086;
+  font-size: 20px;
+  padding: 0px 2px;
+  opacity: 0.6;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+}
+
+#workspaces button.urgent {
+  color: red;
+  border-color: red;
+}
+
+#workspaces button.active {
+  opacity: 1;
+  color: #ffffff;
+}
+
+#mpris {
+  margin: 3px 6px 6px 3px;
+  background-color: @softbg;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  opacity: 1;
+  padding: 4px 8px;
+}
+
+#temperature,
+#network,
+#wireplumber,
+#battery {
+  transition: all 0.3s ease;
+  padding: 3px 6px 6px 6px;
+}
+
+#battery.charging {
+  color: #36d176;
+}
+
+#mpris:not(.playing):not(.paused) {
+  transition: all 0.3s ease;
+  opacity: 0;
+  padding: 4px 0px;
+}
+
+#clock {
+  margin: 3px 6px 6px 3px;
+  background-color: @softbg;
+  border-radius: 8px;
+  padding: 4px 8px;
+}
