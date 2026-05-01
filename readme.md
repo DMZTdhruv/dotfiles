@@ -1,5 +1,6 @@
-# NEW DOTFILES COMING SOON :3
-Hewoo admin here 5th oct 2025, I haven't got time to update the dotfiles to latest as I am busy with my work. I am a founding engineer at a startup and I am mostly focused on my work. However my new rice is very productive and I haven't changed it from the last 2 months, and I wish to share this productive rice soon, till then enjoy the kita rice, I will udpate my dotfiles with my latest rice before 2026 starts!! New rice will have, Change wallpaper easily, themes, one waybar but with 3 types of styles, better rofi, and much more... I don't wanna spoil everything xD
+# NEW DOTFILES
+
+I actually left nixos and now I am using fedora. However that doesn't mean nixos is bad and I left to rot. Nixos was my first ever distro and till this day I really like it. If it's something I struggle to do with nixos then it's not nixos issue it's my skill issue. So I have posted my last dotfiles in the feat/good-config branch feel free to steal stuff from there. It's configured to noctallia shell there, but you will also find good swaync ui, waybar, rofi, nvim configs yep that's it other stuff is just nixos stuff and hyprland.
 
 ---
 
